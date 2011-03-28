@@ -1,0 +1,21 @@
+; php-crowdflower api - test framework
+
+About the Tests
+
+To the purist, these aren't really "unit" tests, but functional tests.  They utilize the live API by creating and modifying units, jobs and orders.  The good news about this however is that most things are tested in "real life".  Also, the tests are great examples on how to use the API itself.
+
+To run the tests, you need to:
+1. Get an API key from CrowdFlower
+2. Create the following "test" jobs in your account and put them in the right state
+- unordered
+- canceled
+- finished job
+- paused
+- running
+3. Install phpunit (I used 3.5.12)
+3. modify CrowdFlower_AbstractGeneric.php and fill in sample "test" jobs ids that you created above
+4. run outside the test dir like so:
+    phpunit test
+
+Notes:
+notice the _reportInfo method in most of the tests.  Set $this->debug=1 right above it to have the response info dumped out for reading
