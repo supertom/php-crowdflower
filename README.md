@@ -47,12 +47,13 @@ Download all judgments from a job
         $resp = $job->download($jobID, $filename, true);
 
 General Structure of the Response Object
+-----------
 
 When making calls to the API, an array is returned with the following:
 1. 'response', which contains the actual json_decoded response from Crowdflower
 2. 'info', which contains the associative array returned by curl_getinfo()
-2b. If an error due to curl (network timeout, etc.) occurs, the array will contain two extra elements: error_msg and error_code
-3. 'request', the complete request, including URL, method, and data sent
+3. If an error due to curl (network timeout, etc.) occurs, the array will contain two extra elements: error_msg and error_code
+4. 'request', the complete request, including URL, method, and data sent
 
 Contributing
 ------------
