@@ -4,7 +4,7 @@ A toolkit for interacting with CrowdFlower via the REST API.
 
 This is alpha software. Have fun!
 
-Example Usage (TODO: change)
+Example Usage
 -------------
 
 
