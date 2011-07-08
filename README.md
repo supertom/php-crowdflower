@@ -10,7 +10,7 @@ Example Usage
 Fetch a particular job:
 
         $job = CrowdFlower::factory("job", $apiKey);
-	$resp = $job->get($jobID);
+        $resp = $job->get($jobID);
 
 Upload a CSV file for a job:
 
@@ -54,10 +54,11 @@ General Structure of the Response Object
 -----------
 
 When making calls to the API, an array is returned with the following:
+
 1. 'response', which contains the actual json_decoded response from Crowdflower
-2. 'info', which contains the associative array returned by curl_getinfo()
-3. If an error due to curl (network timeout, etc.) occurs, the array will contain two extra elements: error_msg and error_code
-4. 'request', the complete request, including URL, method, and data sent
+1. 'info', which contains the associative array returned by curl_getinfo()
+1. If an error due to curl (network timeout, etc.) occurs, the array will contain two extra elements: error_msg and error_code
+1. 'request', the complete request, including URL, method, and data sent
 
 Contributing
 ------------
