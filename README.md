@@ -7,6 +7,10 @@ This is alpha software. Have fun!
 Example Usage
 -------------
 
+Fetch a particular job:
+
+        $job = CrowdFlower::factory("job", $apiKey);
+	$resp = $job->get($jobID);
 
 Upload a CSV file for a job:
 
