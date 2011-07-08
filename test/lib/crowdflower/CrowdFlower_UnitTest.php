@@ -238,8 +238,7 @@ _EOT_;
         $split_resp = $this->object->split($this->jobID, $split_data);
         $this->_reportInfo(__METHOD__, $split_resp);
 
-        //right now they're returning a 302
-        $this->assertEquals(302,$split_resp['info']['http_code']);
+        $this->assertEquals(200,$split_resp['info']['http_code']);
 
     }
 
