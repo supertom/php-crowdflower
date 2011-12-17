@@ -2,7 +2,7 @@
 
 A toolkit for interacting with CrowdFlower via the REST API.
 
-This is alpha software. Have fun!
+I've used this in production for a period of time and had it handling jobs costing $100s of dollars.  Although I'm not using it in production at the moment, the tests (which not only test this PHP API but the CrowdFlower REST API by extension) have running in Hudson (code checked directly out of github) daily since 4/16/2011.  Currently they are passing, with the stats being: Tests: 76, Assertions: 86, Incomplete: 3.
 
 Example Usage
 -------------
