@@ -133,8 +133,7 @@ _EOT_;
         $update_resp = $this->object->update($this->jobID,$create_resp['response']->id, $data);
         $this->_reportInfo(__METHOD__, $update_resp);
 
-        //I think this is a bug on their end, it always returns a 302 even though it updates
-        $this->assertEquals(302,$update_resp['info']['http_code']);
+        $this->assertEquals(200,$update_resp['info']['http_code']);
     }
 
     /**
