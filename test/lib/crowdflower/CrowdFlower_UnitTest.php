@@ -211,8 +211,7 @@ _EOT_;
         $cancel_resp = $this->object->cancel($this->jobID, 77777);
         $this->_reportInfo(__METHOD__, $cancel_resp);
 
-        //this returns a 200, which it shouldn't
-        $this->assertEquals(200, $cancel_resp['info']['http_code']);
+        $this->assertEquals(404, $cancel_resp['info']['http_code']);
 
         //check that the error element is set
         $this->assertTrue(!empty($cancel_resp['response']->error) && strlen($cancel_resp['response']->error));
