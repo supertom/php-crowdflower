@@ -48,9 +48,9 @@ class CrowdFlower_OrderTest extends CrowdFlower_AbstractGeneric {
         $get_resp = $job->get($jobID);
         $this->_reportInfo(__METHOD__, $get_resp);
         $times_tried = 0;
-        while ($get_resp['response']->units_count == 0 && $times_tried < 5) {
+        while ($get_resp['response']->units_count == 0 && $times_tried < 50) {
             print "Waiting for units to show up for $jobID.  Attempts: $times_tried\n";
-            sleep(2);
+            sleep(5);
             $get_resp = $job->get($jobID);
             $times_tried++;
         }
